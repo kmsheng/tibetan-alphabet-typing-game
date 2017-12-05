@@ -1,0 +1,97 @@
+@keyframes shake {
+
+  10%, 90% {
+    transform: translate3d(-6px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(6px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-9px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(9px, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: 3px solid #4d90fe;
+}
+
+body {
+  font-size: 20px;
+  text-align: center;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+.shake {
+  animation: shake 1s;
+}
+
+#form {
+  width: 360px;
+  margin: 40px auto;
+  padding: 0 21px;
+}
+
+#pad {
+  font-size: 6em;
+}
+
+#wylie {
+  font-size: 2em;
+}
+
+#zhuyin {
+  font-size: 2em;
+}
+
+#input {
+  border: 1px solid #ccc;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  font-size: 3em;
+}
+
+.success {
+  color: #23717b;
+}
+
+.danger {
+  color: #9d1f02;
+}
+
+#message {
+  margin-top: 14px;
+  font-size: 3em;
+}
+
+.hidden {
+  display: none;
+}
+
+.input-wrap {
+  display: block;
+  margin-top: 14px;
+}
+
+.hint {
+  padding: 10px 0;
+  display: block;
+  font-size: 1em;
+}
