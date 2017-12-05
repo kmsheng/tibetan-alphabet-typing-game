@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tibetan Alphabet Typing Game</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <form id="form" autocomplete="off">
+    <label>
+      <input id="checkbox-zhuyin" type="checkbox" />
+      <span>Show Zhuyin</span>
+    </label>
+    <label>
+      <input id="checkbox-wylie" type="checkbox" />
+      <span>Show Wylie</span>
+    </label>
+    <div id="pad"></div>
+    <div id="zhuyin"></div>
+    <div id="wylie"></div>
+    <label class="input-wrap">
+      <span class="hint">Type The Same Tibetan Alphabet Here</span>
+      <input type="text" id="input" />
+    </label>
+    <div id="message"></div>
+  </form>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/5.5.2/Rx.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
