@@ -67,7 +67,9 @@ class TibetanAlphabetTypingGame {
   }
 
   showMessage(message) {
+    const hasMessage = !! message;
     this.message.textContent = message;
+    this.message.setAttribute('aria-hidden', hasMessage ? 'false' : 'true');
     return this;
   }
 
