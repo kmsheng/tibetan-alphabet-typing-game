@@ -110,7 +110,7 @@ class TibetanAlphabetTypingGame {
           self.setMessageType('success')
             .showMessage('Correct');
 
-          Rx.Observable.timer(self.successDuration)
+          timer(self.successDuration)
             .subscribe(() => {
               self.showMessage('');
               self.showRandomAlphabet();
