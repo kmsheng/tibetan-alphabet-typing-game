@@ -107,7 +107,9 @@ class TibetanAlphabetTypingGame {
 
         self.freeze();
 
-        if (self.input.value.trim() === self.pad.textContent) {
+        const answer = self.pad.textContent;
+
+        if (self.input.value.trim() === answer) {
 
           self.setMessageType('success')
             .showMessage('Correct');
@@ -123,7 +125,7 @@ class TibetanAlphabetTypingGame {
         else {
 
           self.setMessageType('danger')
-            .showMessage('Wrong');
+            .showMessage(`Wrong, please input ${answer}`);
 
           self.shake();
           self.unfreeze();
