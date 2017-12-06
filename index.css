@@ -91,6 +91,7 @@ input[type="checkbox"] {
 }
 
 .hint {
+  text-align: left;
   padding: 10px 0;
   display: block;
   font-size: 1em;
