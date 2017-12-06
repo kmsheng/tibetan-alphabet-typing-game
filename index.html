@@ -10,20 +10,20 @@
   <form id="form" autocomplete="off">
     <label>
       <input id="checkbox-zhuyin" type="checkbox" />
-      <span>Show Zhuyin</span>
+      Show Zhuyin
     </label>
     <label>
       <input id="checkbox-wylie" type="checkbox" />
-      <span>Show Wylie</span>
+      Show Wylie
     </label>
-    <div id="pad"></div>
+    <div id="pad" aria-live="polite"></div>
     <div id="zhuyin"></div>
     <div id="wylie"></div>
     <label class="input-wrap">
-      <span class="hint">Input Tibetan Alphabet</span>
-      <input type="text" id="input" />
+      Input Tibetan Alphabet
+      <input type="text" id="input" aria-describedby="message" />
+      <div id="message" role="alert"></div>
     </label>
-    <div id="message"></div>
   </form>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/5.5.2/Rx.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
