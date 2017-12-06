@@ -1,5 +1,5 @@
 const {shuffle} = _;
-const {fromEvent} = Rx.Observable;
+const {fromEvent, timer} = Rx.Observable;
 
 class TibetanAlphabetTypingGame {
 
@@ -75,7 +75,7 @@ class TibetanAlphabetTypingGame {
     const self = this;
     self.form.classList.add('shake');
 
-    Rx.Observable.timer(self.shakeDuration)
+    timer(self.shakeDuration)
       .subscribe(() => self.form.classList.remove('shake'));
   }
 
