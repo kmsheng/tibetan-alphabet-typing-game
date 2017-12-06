@@ -66,6 +66,7 @@ input[type="checkbox"] {
   padding: 20px;
   width: 100%;
   font-size: 2em;
+  margin-top: 14px;
 }
 
 .success {
@@ -78,7 +79,8 @@ input[type="checkbox"] {
 
 #message {
   margin-top: 14px;
-  font-size: 3em;
+  font-size: 1em;
+  text-align: left;
 }
 
 .hidden {
@@ -88,6 +90,7 @@ input[type="checkbox"] {
 .input-wrap {
   display: block;
   margin-top: 14px;
+  text-align: left;
 }
 
 .hint {
