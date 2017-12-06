@@ -1,5 +1,5 @@
 const {shuffle} = _;
-const {fromEvent} = Rx.Observable;
+const {fromEvent, timer} = Rx.Observable;
 
 class TibetanAlphabetTypingGame {
 
@@ -67,7 +67,9 @@ class TibetanAlphabetTypingGame {
   }
 
   showMessage(message) {
+    const hasMessage = !! message;
     this.message.textContent = message;
+    this.message.setAttribute('aria-hidden', hasMessage ? 'false' : 'true');
     return this;
   }
 
@@ -75,7 +77,7 @@ class TibetanAlphabetTypingGame {
     const self = this;
     self.form.classList.add('shake');
 
-    Rx.Observable.timer(self.shakeDuration)
+    timer(self.shakeDuration)
       .subscribe(() => self.form.classList.remove('shake'));
   }
 
@@ -105,12 +107,14 @@ class TibetanAlphabetTypingGame {
 
         self.freeze();
 
-        if (self.input.value.trim() === self.pad.textContent) {
+        const answer = self.pad.textContent;
+
+        if (self.input.value.trim() === answer) {
 
           self.setMessageType('success')
             .showMessage('Correct');
 
-          Rx.Observable.timer(self.successDuration)
+          timer(self.successDuration)
             .subscribe(() => {
               self.showMessage('');
               self.showRandomAlphabet();
@@ -121,7 +125,7 @@ class TibetanAlphabetTypingGame {
         else {
 
           self.setMessageType('danger')
-            .showMessage('Wrong');
+            .showMessage(`Wrong, please input ${answer}`);
 
           self.shake();
           self.unfreeze();
